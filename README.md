@@ -5,3 +5,6 @@ server:jetty
 
 projectType:gradle
 
+database:Mysql
+
+construct:SH
