@@ -22,17 +22,8 @@
      private SessionFactory sessionFactory;
 
      public List<User> getAllUsers() {
-         Session ses = null;
-         try {
-             ses = sessionFactory.openSession();
+             Session ses = sessionFactory.openSession();
              Query query = ses.createQuery(" from "+User.class.getName()+"");
              return query.list();
-         }
-         catch (HibernateException e) {
-             throw new RuntimeException(e);
-         }
-         finally {
-             ses.close();
-         }
      }
  }
